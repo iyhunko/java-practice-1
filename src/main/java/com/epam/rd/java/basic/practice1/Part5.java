@@ -10,7 +10,7 @@ public class Part5 {
         double sum = 0;
         double[] numbers = new double[args.length];
 
-        for(int i=0; i < args.length; i++){
+        for (int i = 0; i < args.length; i++) {
             if (isNumericPattern.matcher(args[i]).matches() && Double.parseDouble(args[i]) > 0) {
                 numbers[i] = Double.parseDouble(args[i]);
             }
@@ -27,5 +27,5 @@ public class Part5 {
             System.out.print(sum);
         }
     }
-	
+
 }

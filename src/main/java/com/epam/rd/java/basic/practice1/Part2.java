@@ -9,7 +9,7 @@ public class Part2 {
     public static void main(String[] args) {
         double sum = 0;
 
-        for(String arg: args) {
+        for (String arg : args) {
             if (isNumericPattern.matcher(arg).matches()) {
                 sum += Double.parseDouble(arg);
             }
@@ -22,5 +22,5 @@ public class Part2 {
             System.out.print(sum);
         }
     }
-	
+
 }
