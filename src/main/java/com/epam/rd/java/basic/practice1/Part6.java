@@ -7,6 +7,10 @@ public class Part6 {
         int max = 1000000;
         int amountOfPrinted = 0;
 
+        if (numberOfElements == 0) {
+            return;
+        }
+
         for (int i = 2; i < max; i++) {
             boolean isPrimeNumber = true;
 
