@@ -7,15 +7,17 @@ public class Part7 {
             'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     };
 
+    private static final String SEPARATOR = " ==> ";
+
     public static void main(String[] args) {
-        System.out.println("A ==> " + str2int("A") + " ==> " + int2str(1));
-        System.out.println("B ==> " + str2int("B") + " ==> " + int2str(2));
-        System.out.println("Z ==> " + str2int("Z") + " ==> " + int2str(26));
-        System.out.println("AA ==> " + str2int("AA") + " ==> " + int2str(27));
-        System.out.println("AZ ==> " + str2int("AZ") + " ==> " + int2str(52));
-        System.out.println("BA ==> " + str2int("BA") + " ==> " + int2str(53));
-        System.out.println("ZZ ==> " + str2int("ZZ") + " ==> " + int2str(702));
-        System.out.println("AAA ==> " + str2int("AAA") + " ==> " + int2str(703));
+        System.out.println("A"+SEPARATOR + str2int("A") + SEPARATOR + int2str(1));
+        System.out.println("B"+SEPARATOR + str2int("B") + SEPARATOR + int2str(2));
+        System.out.println("Z"+SEPARATOR + str2int("Z") + SEPARATOR + int2str(26));
+        System.out.println("AA"+SEPARATOR + str2int("AA") + SEPARATOR + int2str(27));
+        System.out.println("AZ"+SEPARATOR + str2int("AZ") + SEPARATOR + int2str(52));
+        System.out.println("BA"+SEPARATOR + str2int("BA") + SEPARATOR + int2str(53));
+        System.out.println("ZZ"+SEPARATOR + str2int("ZZ") + SEPARATOR + int2str(702));
+        System.out.println("AAA"+SEPARATOR + str2int("AAA") + SEPARATOR + int2str(703));
     }
 
     public static int str2int(String columnName) {
