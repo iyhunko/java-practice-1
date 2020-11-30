@@ -1,10 +1,6 @@
 package com.epam.rd.java.basic.practice1;
 
-import java.util.regex.Pattern;
-
 public class Part4 {
-
-    private static final Pattern isNumericPattern = Pattern.compile("-?\\d+(\\.\\d+)?");
 
     public static void main(String[] args) {
         double greatestCommonDivisor;
@@ -12,14 +8,12 @@ public class Part4 {
         double number2 = 0;
 
         for (String arg : args) {
-            if (isNumericPattern.matcher(arg).matches() && Double.parseDouble(arg) > 0) {
-                if (number1 == 0) {
-                    number1 = Double.parseDouble(arg);
-                } else {
-                    number2 = Double.parseDouble(arg);
+            if (number1 == 0) {
+                number1 = Double.parseDouble(arg);
+            } else {
+                number2 = Double.parseDouble(arg);
 
-                    break;
-                }
+                break;
             }
         }
 

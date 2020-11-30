@@ -18,6 +18,8 @@ public class Part6 {
             }
         }
 
+        String delimiter = " ";
+
         System.out.print(Arrays.toString(result));
     }
 }
