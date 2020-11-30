@@ -1,30 +1,31 @@
 package com.epam.rd.java.basic.practice1;
 
-
 public class Part6 {
 
     public static void main(String[] args) {
         int numberOfElements = Integer.parseInt(args[0]);
+        int max = 1000000;
+        int amountOfPrinted = 0;
 
-        int[] digits = new int[numberOfElements];
+        for (int i = 2; i < max; i++) {
+            boolean isPrimeNumber = true;
 
-        for (int i = 0; i < numberOfElements; i++) {
-            if (i < 2) {
-                digits[i] = 2 + i;
-            } else {
-                digits[i] = digits[i - 1] + i;
+            for (int j = 2; j < i; j++) {
+                if ((i % j) == 0) {
+                    isPrimeNumber = false;
+                    break;
+                }
+            }
+
+            if (isPrimeNumber) {
+                System.out.print(i);
+                amountOfPrinted++;
+                if (amountOfPrinted == numberOfElements) {
+                    break;
+                } else {
+                    System.out.print(' ');
+                }
             }
         }
-
-        StringBuilder result = new StringBuilder("[");
-        for (int i = 0; i < digits.length; i++) {
-            if (i != 0) {
-                result.append(" ");
-            }
-            result.append(digits[i]);
-        }
-        result.append("]");
-
-        System.out.print(result.toString());
     }
 }
